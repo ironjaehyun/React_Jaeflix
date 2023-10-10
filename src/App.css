@@ -1,38 +1,116 @@
-.App {
-  text-align: center;
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+*{
+    font-family: 'Pretendard-Regular';
+    color: white;
+}
+.title{
+    width: 150px;
+    margin-right: 20px;
+}
+#root{
+    background-color: rgb(44, 48, 53);
+    width: 100%;
+    height: 100%;
+}
+.link-item{
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+    margin-left : 15px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.link-item:active{
+    color: red;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.poster{
+    position: relative;
+}
+.poster__cont{
+    position: absolute;
+    bottom: 130px;
+    left: 80px;
+    width: 40%;
+    z-index:1;
+}
+/* 
+::before 
+*/
+
+.poster__img{
+    width: 100%;
+    height:600px;
+    object-fit: cover;
+    filter: brightness(60%);
+    
+}
+/* .poster__img::before{
+    content: "";
+    background : linear-gradient(to right,black,transparent);
+    width: 100%;
+    height: 600px;
+    position: absolute;
+    left: 0;
+} */
+
+.overview{
+    margin-top: 0px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.card-item{
+    width: 300px;
+    height: 200px;
 }
 
-.App-link {
-  color: #61dafb;
+.overlay{
+    opacity : 0;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: end;
+    padding: 0 0 20px 20px;
+    width: 100%;
+    height: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.overlay:hover{
+    opacity: 100;
+    background-color: rgba(0, 0, 0, 0.729);
+    
+}
+
+.card-item a{
+    text-decoration: none;
+    color: white;
+}
+
+/* detail page */
+.movie-detail{
+    padding: 3%;
+    height: 95%;
+}
+/* detail -> movie box */
+.movie-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* detail -> poster */
+.detail-poster{
+    width : 500px;
+    height: 600px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* detail -> poster 외 아이템 */
+.detail-item{
+    width: 80%;
 }
